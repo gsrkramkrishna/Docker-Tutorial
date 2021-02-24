@@ -20,9 +20,14 @@ In terms of Docker, a bridge network uses a software bridge which allows contain
 **Example:** **Container c1 and c2 created with default bridge network. Both are communicated via ip address and not communicated by container name.**
 <br>
 docker pull alpine -- pull the alpine image
+<br>
 docker run -ltd --name=alpine1 alpine
+<br>
 docker run -ltd --name=alpine2 alpine
-
+<br>
+<br>
 docker attach alpine1 -- user can enter commands once it's executed. Please use the ping command.
+<br>
 ping 172.2.0.3 -- it gives the response
+<br>
 ping alpine2 -- it returns bad address 'alpine2'
