@@ -7,6 +7,7 @@ Docker Tutorial
 Docker will proivde 3 implicit drivers when we install Docker. They are bridge,host and null drivers. please use the below command.
 <br>
 docker network ls -- it gives the list of network drivers.
+<br>
 **2.1 Network Drivers:**
       Docker’s networking subsystem is pluggable, using drivers. Several drivers exist by default, and provide core networking            functionality:
 
