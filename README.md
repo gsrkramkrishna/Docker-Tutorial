@@ -30,9 +30,27 @@ docker run -ltd --name=alpine1 alpine
 <br>
 docker run -ltd --name=alpine2 alpine
 <br>
-<br>
 docker attach alpine1 -- user can enter commands once it's executed. Please use the ping command.
 <br>
 ping 172.2.0.3 -- it gives the response
 <br>
 ping alpine2 -- it returns bad address 'alpine2'
+<br>
+**Create Custom Bridge Network:**
+<br>
+docker network create web-app
+<br>
+**Example:** **Container c3 and c4 created with custom bridge network. Both are communicated by ip address and container name.**
+<br>
+docker run -ltd -network=web-app --name=alpine3 alpine
+<br>
+docker run -ltd -network=web-app --name=alpine4 alpine
+<br>
+<br>
+docker attach alpine3 -- user can enter commands once it's executed. Please use the ping command.
+<br>
+ping 172.18.0.3 -- it gives the response
+<br>
+ping alpine4 -- it gives the response
+<br>
+
