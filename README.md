@@ -21,6 +21,7 @@ docker network ls -- it gives the list of network drivers.
 In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, while providing isolation from containers which are not connected to that bridge network. The Docker bridge driver automatically installs rules in the host machine so that containers on different bridge networks cannot communicate directly with each other.
 
 **2.1.1 Bridge Network:** It's a default network. Containers are communicted via ip address where all containers created with default bridge.
+<br>
 **Example:** **Container c1 and c2 created with default bridge network. Both are communicated via ip address and not communicated by container name.**
 <br>
 docker pull alpine -- pull the alpine image
